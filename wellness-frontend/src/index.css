@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography */
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Playfair Display", serif;
+
+  /* Color Palette - Minimalist Luxury */
+  --color-brand-primary: #1A3E39;
+  /* Deep Forest */
+  --color-brand-secondary: #D4A373;
+  /* Earthy Gold */
+  --color-brand-accent: #E9EDC9;
+  /* Soft Sage */
+  --color-brand-silk: #FEFAE0;
+  /* Vanilla Silk */
+  --color-brand-stone: #FAFAF9;
+  /* Clean Stone */
+
+  --color-wellness-50: #F8FAF9;
+  --color-wellness-100: #F1F5F3;
+  --color-wellness-200: #E2E8F0;
+  --color-wellness-800: #1A2E26;
+  --color-wellness-900: #0F1A16;
+
+  /* Glass & Depth */
+  --shadow-luxury: 0 30px 60px -12px rgba(0, 0, 0, 0.08), 0 18px 36px -18px rgba(0, 0, 0, 0.05);
+  --shadow-glass: inset 0 0 0 1px rgba(255, 255, 255, 0.2), 0 8px 32px 0 rgba(0, 40, 20, 0.05);
+
+  --radius-luxury: 2rem;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    font-family: var(--font-sans);
+    background-color: var(--color-brand-stone);
+    color: var(--color-brand-primary);
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  .btn-premium {
+    @apply px-8 py-4 bg-brand-primary text-white font-semibold rounded-full hover:bg-wellness-800 transition-all duration-500 shadow-xl hover:-translate-y-1 active:scale-95 flex items-center justify-center gap-2;
+  }
+
+  .btn-outline {
+    @apply px-8 py-4 border-2 border-brand-primary text-brand-primary font-semibold rounded-full hover:bg-brand-primary hover:text-white transition-all duration-500;
+  }
+
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-2xl border border-white/40 shadow-glass;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-20;
+  }
+}
+
+@layer utilities {
+  .animate-reveal {
+    animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,16 @@
+com\wellness\repository\BookingRepository.class
+com\wellness\service\CustomUserDetailsService.class
+com\wellness\config\JwtUtil.class
+com\wellness\service\AuthService.class
+com\wellness\controller\UserController.class
+com\wellness\model\Booking.class
+com\wellness\config\JwtFilter.class
+com\wellness\dto\AuthRequest.class
+com\wellness\config\SecurityConfig.class
+com\wellness\repository\UserRepository.class
+com\wellness\dto\AuthResponse.class
+com\wellness\model\User.class
+com\wellness\dto\RegisterRequest.class
+com\wellness\controller\BookingController.class
+com\wellness\WellnessApplication.class
+com\wellness\controller\AuthController.class
