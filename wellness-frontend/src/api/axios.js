@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080/api',
+    baseURL: import.meta.env.VITE_API_URL || 'https://wellness-backend-mx9s.onrender.com/api',
 });
 
 // Add a request interceptor to include JWT token in headers
